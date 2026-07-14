@@ -3,14 +3,47 @@ body {
     font-family: Arial, sans-serif;
     background: #0b0b0b;
     color: white;
-    text-align: center;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #050505;
+    border-bottom: 1px solid #222;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-logo {
+    font-weight: bold;
+    color: #2b6aff;
+    font-size: 20px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2b6aff;
 }
 
 /* HERO */
 .hero {
     background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30') center/cover;
-    padding: 140px 20px;
+    padding: 160px 20px 140px;
     position: relative;
+    text-align: center;
+    margin-top: 50px; /* space for navbar */
 }
 
 .hero .overlay {
@@ -28,6 +61,7 @@ body {
     position: relative;
     z-index: 2;
     text-shadow: 0 0 15px black;
+    color: white;
 }
 
 .hero p {
@@ -36,6 +70,7 @@ body {
     position: relative;
     z-index: 2;
     text-shadow: 0 0 10px black;
+    color: #ddd;
 }
 
 /* BUTTON */
@@ -57,7 +92,9 @@ body {
     background: #1f4fcc;
 }
 
-/* SERVER STATUS PANEL */
+/* SECTIONS */
+.section,
+.stats-section,
 .status-panel {
     background: #111;
     width: 85%;
@@ -65,14 +102,84 @@ body {
     padding: 40px 20px;
     border-radius: 10px;
     border: 1px solid #222;
+    text-align: center;
 }
 
+.section h2,
+.stats-section h2,
 .status-panel h2 {
     font-size: 32px;
     margin-bottom: 25px;
     color: #2b6aff;
 }
 
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2b6aff;
+}
+
+.card p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* LIST */
+.list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    color: #ddd;
+}
+
+.list li {
+    margin: 10px 0;
+}
+
+/* ERLC SERVER STATS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.stats-box {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    transition: 0.2s;
+}
+
+.stats-box:hover {
+    background: #222;
+}
+
+.stats-box h3 {
+    margin-bottom: 12px;
+    color: #2b6aff;
+    font-size: 22px;
+}
+
+.stats-box p {
+    font-size: 20px;
+    color: #ddd;
+}
+
+/* SERVER STATUS PANEL */
 .status-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -92,43 +199,46 @@ body {
 }
 
 .status-card p {
-    font-size: 20px;
+    font-size: 18px;
     color: #ddd;
 }
 
-/* PANELS */
-.panel {
-    background: #111;
-    margin: 40px auto;
-    padding: 40px 20px;
-    width: 85%;
-    border-radius: 10px;
-    border: 1px solid #222;
+.status-online {
+    border-color: #2bff6a;
 }
 
-.panel h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #2b6aff;
-}
-
-/* GRID */
-.grid {
+/* FACTIONS */
+.factions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-.card {
-    background: #1a1a1a;
+.faction-badge {
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #222;
+    color: white;
+    font-size: 16px;
 }
 
-.card h3 {
-    margin-bottom: 10px;
-    color: #2b6aff;
+.faction-badge h3 {
+    margin-bottom: 8px;
+}
+
+.faction-badge.police {
+    background: #1b2b5f;
+}
+
+.faction-badge.sheriff {
+    background: #4b3b1b;
+}
+
+.faction-badge.dot {
+    background: #1b4b3b;
+}
+
+.faction-badge.fire {
+    background: #5f1b1b;
 }
 
 /* FOOTER */
@@ -137,4 +247,5 @@ footer {
     background: #0f0f0f;
     color: #aaa;
     margin-top: 40px;
+    text-align: center;
 }

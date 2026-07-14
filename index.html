@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<nav class="navbar">
+    <div class="nav-logo">LARP Shop</div>
+    <div class="nav-links">
+        <a href="#stats">Stats</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#roles">Roles</a>
+        <a href="#shifts">Shifts</a>
+        <a href="#gamepasses">Gamepasses</a>
+        <a href="#factions">Factions</a>
+    </div>
+</nav>
+
 <header class="hero">
     <div class="overlay"></div>
     <h1>LARP Shop</h1>
@@ -15,43 +28,79 @@
     <a class="btn" href="#" target="_blank">Join Discord</a>
 </header>
 
-<section class="status-panel">
-    <h2>Server Status</h2>
+<section id="stats" class="stats-section">
+    <h2>Server Statistics</h2>
 
-    <div class="status-grid">
-        <div class="status-card">
-            <h3>Players</h3>
-            <p id="players">0 / 40</p>
+    <div class="stats-grid">
+        <div class="stats-box">
+            <h3>Players Online</h3>
+            <p id="stat-players">0 / 40</p>
         </div>
 
-        <div class="status-card">
+        <div class="stats-box">
             <h3>Queue</h3>
-            <p id="queue">0</p>
+            <p id="stat-queue">0</p>
         </div>
 
-        <div class="status-card">
+        <div class="stats-box">
             <h3>Staff Online</h3>
-            <p id="staff">0</p>
+            <p id="stat-staff">0</p>
         </div>
 
-        <div class="status-card">
-            <h3>Teams</h3>
-            <p id="teams">Police: 0 | Sheriff: 0 | DOT: 0 | Fire: 0</p>
+        <div class="stats-box">
+            <h3>Active Departments</h3>
+            <p id="stat-departments">Electronics, Groceries, Clothing</p>
+        </div>
+
+        <div class="stats-box">
+            <h3>Total Employees</h3>
+            <p id="stat-employees">0</p>
+        </div>
+
+        <div class="stats-box">
+            <h3>Shifts Completed Today</h3>
+            <p id="stat-shifts">0</p>
         </div>
     </div>
 </section>
 
-<section class="panel">
+<section class="status-panel">
+    <h2>Server Status</h2>
+
+    <div class="status-grid">
+        <div class="status-card status-online">
+            <h3>Status</h3>
+            <p>Online</p>
+        </div>
+
+        <div class="status-card">
+            <h3>Region</h3>
+            <p>EU / CZ</p>
+        </div>
+
+        <div class="status-card">
+            <h3>Version</h3>
+            <p>1.0.0</p>
+        </div>
+
+        <div class="status-card">
+            <h3>Max Players</h3>
+            <p>40</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
     <h2>About the Server</h2>
     <p>LARP Shop is an ERLC-inspired shopping roleplay server featuring realistic store departments, employee shifts, custom jobs, and a professional staff team.</p>
 </section>
 
-<section class="panel">
+<section id="departments" class="section">
     <h2>Departments</h2>
-    <div class="grid">
+    <div class="cards">
         <div class="card">
             <h3>Electronics</h3>
-            <p>Phones, laptops, consoles, accessories.</p>
+            <p>Phones, laptops, consoles.</p>
         </div>
         <div class="card">
             <h3>Groceries</h3>
@@ -68,9 +117,9 @@
     </div>
 </section>
 
-<section class="panel">
+<section id="roles" class="section">
     <h2>Employee Roles</h2>
-    <ul>
+    <ul class="list">
         <li>Cashier</li>
         <li>Stocker</li>
         <li>Security</li>
@@ -78,21 +127,70 @@
     </ul>
 </section>
 
-<section class="panel">
+<section id="shifts" class="section">
     <h2>Shifts</h2>
     <p>Complete store shifts to earn money and progress your employee rank.</p>
     <a class="btn" href="#" target="_blank">Shift Guide</a>
 </section>
 
-<section class="panel">
+<section id="gamepasses" class="section">
     <h2>Gamepasses</h2>
     <a class="btn" href="#" target="_blank">VIP Shopper</a>
     <a class="btn" href="#" target="_blank">Premium Employee</a>
 </section>
 
+<section id="factions" class="section">
+    <h2>Factions</h2>
+    <div class="factions-grid">
+        <div class="faction-badge police">
+            <h3>Police</h3>
+            <p>Traffic & store security support.</p>
+        </div>
+        <div class="faction-badge sheriff">
+            <h3>Sheriff</h3>
+            <p>County law enforcement.</p>
+        </div>
+        <div class="faction-badge dot">
+            <h3>DOT</h3>
+            <p>Logistics, deliveries, road support.</p>
+        </div>
+        <div class="faction-badge fire">
+            <h3>Fire & Rescue</h3>
+            <p>Emergency response & medical.</p>
+        </div>
+    </div>
+</section>
+
 <footer>
     <p>© 2026 LARP Shop — ERLC Shopping RP</p>
 </footer>
+
+<script>
+    // Simple fake animation for stats (just to look alive)
+    document.addEventListener("DOMContentLoaded", () => {
+        const players = document.getElementById("stat-players");
+        const queue = document.getElementById("stat-queue");
+        const staff = document.getElementById("stat-staff");
+        const employees = document.getElementById("stat-employees");
+        const shifts = document.getElementById("stat-shifts");
+
+        let p = 18;
+        let q = 3;
+        let s = 4;
+        let e = 25;
+        let sh = 12;
+
+        function update() {
+            players.textContent = `${p} / 40`;
+            queue.textContent = q.toString();
+            staff.textContent = s.toString();
+            employees.textContent = e.toString();
+            shifts.textContent = sh.toString();
+        }
+
+        update();
+    });
+</script>
 
 </body>
 </html>
