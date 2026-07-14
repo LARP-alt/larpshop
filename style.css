@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade') center/cover;
+    padding: 120px 20px;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #0088cc;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+footer {
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+}
