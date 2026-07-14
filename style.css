@@ -93,9 +93,7 @@ body {
 }
 
 /* SECTIONS */
-.section,
-.stats-section,
-.status-panel {
+.section {
     background: #111;
     width: 85%;
     margin: 40px auto;
@@ -105,9 +103,7 @@ body {
     text-align: center;
 }
 
-.section h2,
-.stats-section h2,
-.status-panel h2 {
+.section h2 {
     font-size: 32px;
     margin-bottom: 25px;
     color: #2b6aff;
@@ -147,98 +143,6 @@ body {
 
 .list li {
     margin: 10px 0;
-}
-
-/* ERLC SERVER STATS */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-}
-
-.stats-box {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid #222;
-    transition: 0.2s;
-}
-
-.stats-box:hover {
-    background: #222;
-}
-
-.stats-box h3 {
-    margin-bottom: 12px;
-    color: #2b6aff;
-    font-size: 22px;
-}
-
-.stats-box p {
-    font-size: 20px;
-    color: #ddd;
-}
-
-/* SERVER STATUS PANEL */
-.status-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.status-card {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #222;
-}
-
-.status-card h3 {
-    margin-bottom: 10px;
-    color: #2b6aff;
-}
-
-.status-card p {
-    font-size: 18px;
-    color: #ddd;
-}
-
-.status-online {
-    border-color: #2bff6a;
-}
-
-/* FACTIONS */
-.factions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.faction-badge {
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-}
-
-.faction-badge h3 {
-    margin-bottom: 8px;
-}
-
-.faction-badge.police {
-    background: #1b2b5f;
-}
-
-.faction-badge.sheriff {
-    background: #4b3b1b;
-}
-
-.faction-badge.dot {
-    background: #1b4b3b;
-}
-
-.faction-badge.fire {
-    background: #5f1b1b;
 }
 
 /* FOOTER */
