@@ -34,17 +34,17 @@
     <div class="stats-grid">
         <div class="stats-box">
             <h3>Players Online</h3>
-            <p id="stat-players">0 / 40</p>
+            <p id="stat-players">18 / 40</p>
         </div>
 
         <div class="stats-box">
             <h3>Queue</h3>
-            <p id="stat-queue">0</p>
+            <p id="stat-queue">3</p>
         </div>
 
         <div class="stats-box">
             <h3>Staff Online</h3>
-            <p id="stat-staff">0</p>
+            <p id="stat-staff">4</p>
         </div>
 
         <div class="stats-box">
@@ -54,12 +54,12 @@
 
         <div class="stats-box">
             <h3>Total Employees</h3>
-            <p id="stat-employees">0</p>
+            <p id="stat-employees">25</p>
         </div>
 
         <div class="stats-box">
             <h3>Shifts Completed Today</h3>
-            <p id="stat-shifts">0</p>
+            <p id="stat-shifts">12</p>
         </div>
     </div>
 </section>
@@ -164,33 +164,6 @@
 <footer>
     <p>© 2026 LARP Shop — ERLC Shopping RP</p>
 </footer>
-
-<script>
-    // Simple fake animation for stats (just to look alive)
-    document.addEventListener("DOMContentLoaded", () => {
-        const players = document.getElementById("stat-players");
-        const queue = document.getElementById("stat-queue");
-        const staff = document.getElementById("stat-staff");
-        const employees = document.getElementById("stat-employees");
-        const shifts = document.getElementById("stat-shifts");
-
-        let p = 18;
-        let q = 3;
-        let s = 4;
-        let e = 25;
-        let sh = 12;
-
-        function update() {
-            players.textContent = `${p} / 40`;
-            queue.textContent = q.toString();
-            staff.textContent = s.toString();
-            employees.textContent = e.toString();
-            shifts.textContent = sh.toString();
-        }
-
-        update();
-    });
-</script>
 
 </body>
 </html>

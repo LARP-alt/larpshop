@@ -43,7 +43,7 @@ body {
     padding: 160px 20px 140px;
     position: relative;
     text-align: center;
-    margin-top: 50px; /* space for navbar */
+    margin-top: 50px;
 }
 
 .hero .overlay {
